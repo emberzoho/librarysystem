@@ -1,0 +1,28 @@
+<article class="listing">
+  <img src={{this.book.bookimgurl}} alt="" height="450" width="350">
+  <div class="details">
+    <h3>{{this.book.title}}</h3>
+    <div class="detail owner">
+      <span>Author:</span> {{this.book.author}}
+    </div>
+    <div class="detail owner">
+      <span>Publication:</span> {{this.book.publication}}
+    </div>
+    <div class="detail owner">
+      <span>Year of publication:</span> {{this.book.yop}}
+    </div>
+    <div class="detail owner">
+    <a onclick={{action "toggleDescription"}} class="btn" role="button"><small>View Description</small></a>
+    <p class="{{if this.isWide "d-none" "d-block"}}"> 
+      <span>Description:</span> {{this.book.description}}
+    </p>
+    <hr>
+    </div>
+  </div>
+</article>
+<!--
+	<a onclick={{action "toggleImageSize"}} class="btn {{if this.isWide "h-100 w-100"}}" role="button">
+   	<img src={{this.book.bookimgurl}} alt="">
+    <small>View Larger</small>
+	</a>
+-->

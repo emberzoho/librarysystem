@@ -1,0 +1,23 @@
+{{outlet}}
+<center>
+<div class="mx-5 px-5">
+<h1>Books</h1>
+
+{{#each this.model as |bookUnit|}}
+  <BookListing @book={{bookUnit}} />
+{{/each}}
+
+<!--
+<BookFilter
+ @filter={{action "filterByBookName"}}
+as |filteredResults|
+>
+  <ul class="results">
+    {{#each filteredResults as |bookUnit|}}
+      <li><BookListing @book={{bookUnit}} /></li>
+    {{/each}}
+  </ul>
+</BookFilter>
+-->
+</div>
+</center>
