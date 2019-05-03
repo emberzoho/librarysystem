@@ -1,0 +1,16 @@
+<div class="m-5 p-5">
+<form>
+	<div class="form-group">
+		<label>Author name</label>
+		{{input type="text" class="form-control" value=authorname placeholder="Add author author..."}}
+	</div>
+	<div class="form-group">
+		<label>Country</label>
+		{{textarea class="form-control" value=country placeholder="author's country.."}}
+	</div>
+    <center>
+	<button {{action 'addAuthor'}} class="btn btn-primary">Submit</button> </center>
+</form>
+</div>
+<hr>
+<hr>

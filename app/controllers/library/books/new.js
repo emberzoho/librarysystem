@@ -6,7 +6,7 @@ export default Controller.extend({
 
 		
 		addBook: function(){
-			var foo;
+			//var foo;
 			//var storageRef = window.firebase.storage().ref();
 			var title = this.get('title');
 			var author = this.get('author');
@@ -14,20 +14,20 @@ export default Controller.extend({
 			var yop= this.get('yop');
 			var path=this.get('image');
 			this.store.findRecord('book',1).then(function(count){
-				 foo=count.bookid;
+				 var foo=count.bookid;
 				 console.log(foo);
 				 count.set('bookid',foo+1);
-				 console.log(count.get('bookid'));
+				 count.save();
+				 //console.log(count.get('bookid'));
 			 });
-			console.log(foo);
-			//bookid.set('bookid',temp+1);
+			 var bar=this.store.peekRecord('book',1).get('bookid');
+			console.log(bar);
 			var description=this.get('description');
-
-		
 			//Create New Task
+			
 			var newBook = this.store.createRecord('book', {
-				id: foo,
-				bookid:foo,
+				id: bar,
+				bookid:bar,
 			  title: title,
 			  author: author,
 			  publication: publication,
