@@ -9,10 +9,12 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('library', function() {
     this.route('books', function(){
-        this.route('new');
+      this.route('new');
+      this.route('showbook',{path : '/:book_id'});
     });
     this.route('authors', function() {
       this.route('new');
+      this.route('showauthor',{path : '/:author_id'});
     });
   });
   this.route('login');

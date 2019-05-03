@@ -1,0 +1,23 @@
+<div class="jumbo show-listing">
+  <h2 class="title">{{this.model.title}}</h2>
+  <div class="content">
+    <div>
+      <img src={{this.model.bookimgurl}} class="rental-pic" alt="Picture of {{this.model.title}}">
+    </div>
+    <div class="detail-section">
+      <div class="detail owner">
+        <strong>Author:</strong> {{this.model.author}}
+      </div>
+      <div class="detail">
+        <strong>Publication</strong> {{this.model.publication}}
+      </div>
+      <div class="detail">
+        <strong>YOP:</strong> {{this.model.yop}}
+      </div>
+      <div class="description">
+        <p>{{this.model.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{outlet}}

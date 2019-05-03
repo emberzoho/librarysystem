@@ -4,6 +4,7 @@ const { Model, attr } = DS;
 export default Model.extend({
   //id: attr('string'),
   bookid: attr('number'),
+  authorid: attr('number'),
   title: attr('string'),
   author: attr('string'),
   publication: attr('string'),

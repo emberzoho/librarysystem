@@ -17,8 +17,6 @@ export default Controller.extend({
 				 //console.log(count.get('bookid'));
 			 });
 			var bar=this.store.peekRecord('author',1).get('authorid');
-			//console.log(bar);
-			//bookid.set('bookid',temp+1);
 			//Create New Task
 			var newAuthor = this.store.createRecord('author', {
 				id: bar,
