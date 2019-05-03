@@ -4,12 +4,19 @@ export default Controller.extend({
 	//firebaseApp: Ember.inject.service(),
 	actions: {
 
-		
+		setSelection: function(selected) {
+			this.set('selectedOption', selected.authorname);
+			this.set('setid', selected.authorid);
+			console.log(this.get('selectedOption'));
+			console.log(this.get('setid'));
+		  },
 		addBook: function(){
 			//var foo;
 			//var storageRef = window.firebase.storage().ref();
 			var title = this.get('title');
-			var author = this.get('author');
+			var author = this.get('selectedOption');
+			var idd= this.get('setid');
+			console.log("In addbook action "+author);
 			var publication = this.get('publication');
 			var yop= this.get('yop');
 			var path=this.get('image');
@@ -30,6 +37,7 @@ export default Controller.extend({
 				bookid:bar,
 			  title: title,
 			  author: author,
+			  authorid: idd,
 			  publication: publication,
 			  yop: yop,
 			  bookimgurl:path,

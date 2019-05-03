@@ -17,6 +17,7 @@ export default Route.extend({
 	model: function() {
 		//return this.store.query('book', { orderBy: { 'bookid': 'desc' }, limit: 1 });
 		//return this.store.query('book', { query: ref => ref.orderBy('id', 'desc').limit(1) });
+		return this.store.findAll('author');
 
 	  }
 });
