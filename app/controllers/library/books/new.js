@@ -5,8 +5,9 @@ export default Controller.extend({
 	actions: {
 
 		setSelection: function(selected) {
-			this.set('selectedOption', selected.authorname);
-			this.set('setid', selected.authorid);
+			this.set('setid', selected);
+			var temp = this.store.peekRecord('author', selected);
+			this.set('selectedOption',temp.authorname);
 			console.log(this.get('selectedOption'));
 			console.log(this.get('setid'));
 		  },
@@ -16,7 +17,7 @@ export default Controller.extend({
 			var title = this.get('title');
 			var author = this.get('selectedOption');
 			var idd= this.get('setid');
-			console.log("In addbook action "+author);
+			//console.log("In addbook action "+author);
 			var publication = this.get('publication');
 			var yop= this.get('yop');
 			var path=this.get('image');

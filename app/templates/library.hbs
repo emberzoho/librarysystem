@@ -1,7 +1,22 @@
-<button {{action 'logout'}} class="btn btn-primary btn-lg float-right m-5">Logout</button>
-<section class="jumbotron">
-<h1>Hi {{this.model.name}}! Welcome to library!</h1>
-</section>
+<div class="container bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light py-3" >
+                <a class="navbar-brand text-dark h2">
+                    Hi {{this.model.name}}! WELCOME TO LIBRARY
+                </a>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav-tabs align-items-lg-center text-uppercase pt-3 pt-lg-0 ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link">{{#link-to 'library.books'}} BOOKS {{/link-to}}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">{{#link-to 'library.authors'}}AUTHOR{{/link-to}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <button {{action 'logout'}} class="btn btn-primary btn-lg float-right ml-5">Logout</button>
+            </nav>
+        </div>
 <div class="container">
 {{outlet}}
 </div>

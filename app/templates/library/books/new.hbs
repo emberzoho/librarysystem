@@ -1,4 +1,4 @@
-<div class="m-5 p-5">
+<div class="mx-5 px-5">
 <form>
 	<div class="form-group">
 		<label>Title</label>
@@ -14,7 +14,7 @@
 		<label>Author</label>
 		<select onchange={{action "setSelection" value="target.value"}} >
 			{{#each this.model as |author|}}
-				<option name={{author.authorid}} value={{author.authorname}}>{{author.authorname}}</option>
+				<option value={{author.authorid}}>{{author.authorname}}</option>
 			{{/each}}
 			<!-- <option value="abc">ABC</option>
 			<option value="def">DEF</option> -->
