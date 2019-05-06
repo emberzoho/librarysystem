@@ -9,6 +9,6 @@ export default Route.extend({
 		}
 	},
 	model() {
-		return this.store.findRecord('user', firebase.auth().currentUser.uid);  // => GET /blog-posts/1
+    return this.store.findAll('book');
   	}
 });

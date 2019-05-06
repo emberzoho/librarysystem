@@ -14,7 +14,6 @@ export default Component.extend({
 
   actions: {
     handleFilterEntry(arg) {
-      console.log("inside handleFilterEntry")
       let filterInputValue = arg;
       let filterAction = this.filter;
       filterAction(filterInputValue).then((filterResults) => {

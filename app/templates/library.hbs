@@ -1,9 +1,7 @@
 <button {{action 'logout'}} class="btn btn-primary btn-lg float-right m-5">Logout</button>
-{{#if this.model.type}}
-<h3><button class="btn btn-lg float-right m-5">{{#link-to 'library.books.new'}}New Book{{/link-to}}</button></h3>
-<h3><button class="btn btn-lg float-right m-5">{{#link-to 'library.authors.new'}}New Author{{/link-to}}</button></h3>
-{{/if}}
 <section class="jumbotron">
 <h1>Hi {{this.model.name}}! Welcome to library!</h1>
 </section>
+<div class="container">
 {{outlet}}
+</div>
