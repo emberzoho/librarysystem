@@ -2,22 +2,21 @@
 <center>
 <div class="mx-5 px-5">
 <h1>Authors</h1>
-
-{{#each this.model as |authorUnit|}}
-  <AuthorListing @author={{authorUnit}} />
-{{/each}}
-
 <!--
-<BookFilter
- @filter={{action "filterByBookName"}}
-as |filteredResults|
->
-  <ul class="results">
-    {{#each filteredResults as |bookUnit|}}
-      <li><BookListing @book={{bookUnit}} /></li>
-    {{/each}}
-  </ul>
-</BookFilter>
+{{#each this.model as |bookUnit|}}
+  <BookListing @book={{bookUnit}} />
+{{/each}}
 -->
+
+<AuthorFilter @filter={{action "filterByAuthorName"}}
+as |filteredResults|>
+  <section>
+    {{#each filteredResults as |authorUnit|}}
+      <AuthorListing @author={{authorUnit}} />
+    {{/each}}
+  </section>
+</AuthorFilter>
+
+
 </div>
 </center>
