@@ -12,14 +12,6 @@ export default Controller.extend({
 		return { query: param, results: results };
 		});
       }
-		},
-		findBooks(arg){
-			console.log(arg);
-			return this.store.query('book',{filter: {authorid:arg}}).then((results)=>{
-					console.log(results);
-					this.set('showbook',results);
-					return results;
-			});
 		}
 	}
 });

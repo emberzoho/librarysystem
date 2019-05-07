@@ -49,7 +49,11 @@ export default Controller.extend({
 			this.setProperties({
 				title: '',
 				description: '',
-				date: ''
+				date: '',
+				author:'',
+				publication:'',
+				bookimgurl:'',
+				yop:''
 			});
 			
 		}

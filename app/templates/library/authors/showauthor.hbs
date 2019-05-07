@@ -1,5 +1,5 @@
 <div class="jumbo show-listing">
-  <h2 class="title">{{this.model.authorname}}</h2>
+  <h2 class="title">{{this.model.authorrecord.authorname}}</h2>
   <div class="content">
       <!--
     <div>
@@ -8,16 +8,15 @@
     -->
     <div class="detail-section">
       <div class="detail owner">
-        <strong>Country:</strong> {{this.model.country}}
+        <strong>Country:</strong> {{this.model.authorrecord.country}}
       </div>
     </div>
-    <div>
-      <a class="btn" {{action "findBook" this.model.authorid}}>View Books</a>
-      
-      {{#each this.showbooks as |book|}}
-        <h4>{{book.title}}</h4>
+   <h5>Books :</h5>
+    <ul>
+      {{#each this.model.bookrecord as |book|}}
+          <li>{{book.title}}</li>
       {{/each}}
-    </div>
+    </ul>
   </div>
 </div>
 {{outlet}}
