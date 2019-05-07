@@ -1,7 +1,7 @@
-<article class="listing">
-  <div class="details">
-    <h3>{{#link-to 'library.authors.showauthor' author}}{{this.author.authorname}}{{/link-to}}</h3>
-    <div class="detail owner">
+<article>
+  <div>
+    <h3>{{#link-to 'library.authors.showauthor' author.authorid}}{{this.author.authorname}}{{/link-to}}</h3>
+    <div>
       <span>Country:</span> {{this.author.country}}
     </div>
 </div>

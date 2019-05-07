@@ -1,17 +1,17 @@
-<article class="listing">
+<article>
   <img src={{this.book.bookimgurl}} alt="" height="450" width="350">
-  <div class="details">
+  <div>
     <h3>{{#link-to 'library.books.showbook' book}}{{this.book.title}}{{/link-to}}</h3>
-    <div class="detail owner">
+    <div>
       <span>Author: {{#link-to 'library.authors.showauthor' book.authorid}}{{this.book.author}}{{/link-to}}</span>
     </div>
-    <div class="detail owner">
+    <div>
       <span>Publication:</span> {{this.book.publication}}
     </div>
-    <div class="detail owner">
+    <div>
       <span>Year of publication:</span> {{this.book.yop}}
     </div>
-    <div class="detail owner">
+    <div>
     <a onclick={{action "toggleDescription"}} class="btn" role="button"><small>View Description</small></a>
     <p class="{{if this.isWide "d-none" "d-block"}}"> 
       <span>Description:</span> {{this.book.description}}
