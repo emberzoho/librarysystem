@@ -11,6 +11,13 @@
         <strong>Country:</strong> {{this.model.country}}
       </div>
     </div>
+    <div>
+      <a class="btn" {{action "findBook" this.model.authorid}}>View Books</a>
+      
+      {{#each this.showbooks as |book|}}
+        <h4>{{book.title}}</h4>
+      {{/each}}
+    </div>
   </div>
 </div>
 {{outlet}}

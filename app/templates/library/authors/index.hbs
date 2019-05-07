@@ -7,14 +7,23 @@
   <BookListing @book={{bookUnit}} />
 {{/each}}
 -->
-
+<!--
+ <button {{action "findBooks" 1000}}>Click</button>
+<div>
+  {{#each this.bookrecords as |book|}}
+    <h4>{{book.title}}</h4>
+  {{/each}}
+</div>
+-->
 <AuthorFilter @filter={{action "filterByAuthorName"}}
 as |filteredResults|>
   <section>
     {{#each filteredResults as |authorUnit|}}
-      <AuthorListing @author={{authorUnit}} />
+      {{this.findbooks authorUnit.authorid}}
+      <AuthorListing @author={{authorUnit}} @actionauth={{action "findBooks"}}/>
     {{/each}}
   </section>
+
 </AuthorFilter>
 
 

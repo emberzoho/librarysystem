@@ -7,6 +7,7 @@ export default Component.extend({
     this._super(...arguments);
       this.filter('').then((allResults) => {
       this.set('results', allResults.results);
+
     });
    
   },
