@@ -14,7 +14,7 @@
    <h5>Books :</h5>
     <ul>
       {{#each this.model.bookrecord as |book|}}
-          <li>{{book.title}}</li>
+          <li>{{#link-to 'library.books.showbook' book}}{{book.title}}{{/link-to}}</li>
       {{/each}}
     </ul>
   </div>
