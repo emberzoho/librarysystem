@@ -1,8 +1,10 @@
 <section>
-{{#if this.model.type}}
-<center>
-<h3><button class="btn btn-lg m-5">{{#link-to 'library.authors.new'}}New Author{{/link-to}}</button></h3>
-</center>
-{{/if}}
+    {{#if this.model.type}}
+    <center>
+        <h3>
+            <button class="btn btn-lg m-5">{{#link-to 'library.authors.new'}}New Author{{/link-to}}</button>
+        </h3>
+    </center>
+    {{/if}}
 </section>
 {{outlet}}

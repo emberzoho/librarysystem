@@ -4,20 +4,12 @@
 		<label>Title</label>
 		{{input type="text" class="form-control" value=title placeholder="Add Book Title..."}}
 	</div>
-	<!--
-	<div class="form-group">
-		<label>Book ID</label>
-		{{input type="text" class="form-control" value=bookid placeholder="unique book id..."}}
-	</div>
-	-->
 	<div class="form-group">
 		<label>Author</label>
 		<select onchange={{action "setSelection" value="target.value"}} >
 			{{#each this.model as |author|}}
 				<option value={{author.authorid}}>{{author.authorname}}</option>
 			{{/each}}
-			<!-- <option value="abc">ABC</option>
-			<option value="def">DEF</option> -->
 		</select>
 	</div>
 	<div class="form-group">

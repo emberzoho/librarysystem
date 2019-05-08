@@ -3,7 +3,6 @@ import Controller from '@ember/controller';
 export default Controller.extend({
 		actions: {
     handleSignUp() {
-    	//alert("fsdffsdf");
     	var email = document.getElementById('email').value;
 	    var password = document.getElementById('password').value;
       var name= document.getElementById('name').value;

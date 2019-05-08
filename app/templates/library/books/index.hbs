@@ -2,12 +2,6 @@
 <center>
 <div class="mx-5 px-5">
 <h1>Books</h1>
-<!--
-{{#each this.model as |bookUnit|}}
-  <BookListing @book={{bookUnit}} />
-{{/each}}
--->
-
 <BookFilter @filter={{action "filterByBookName"}}
 as |filteredResults|>
   <section>

@@ -2,7 +2,6 @@ import Component from '@ember/component';
 
 export default Component.extend({
   value: '',
-
   init() {
     this._super(...arguments);
       this.filter('').then((allResults) => {
@@ -10,8 +9,6 @@ export default Component.extend({
     });
    
   },
-
-
   actions: {
     handleFilterEntry() {
       let filterInputValue = this.value;
