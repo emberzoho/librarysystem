@@ -1,0 +1,19 @@
+{{outlet}}
+<center>
+<div class="mx-5 px-5">
+<h1>Authors</h1>
+
+
+<Filter @filter={{action "filterByAuthorName"}}
+as |filteredResults|>
+  <section>
+    {{#each filteredResults as |authorUnit|}}
+      <AuthorListing @author={{authorUnit}} />
+    {{/each}}
+  </section>
+
+</Filter>
+
+
+</div>
+</center>
