@@ -19,8 +19,7 @@ export default Controller.extend({
 			var yop= this.get('yop');
 			var path=this.get('image');
 			this.store.findRecord('book',1).then(function(count){
-				 var foo=count.bookid;
-				 count.set('bookid',foo+1);
+				 count.incrementProperty('bookid');
 				 count.save();
 				 
 			 });
