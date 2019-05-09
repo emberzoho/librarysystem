@@ -11,7 +11,7 @@
 <div class="container-fluid">
 		<div class="mt-5 row justify-content-md-center">
 				<div class="col col-sm-12 col-md-4">
-						<div class="whitebox animated fadeInUp">
+						<div>
 								<h1 class="display-4 text-center">
 										Sign Up
 								</h1>
@@ -29,10 +29,8 @@
 												<input type="password" class="form-control" name="password" id="password" placeholder="Password">
 										</div>	
 										<center>
-												<button {{action "handleSignUp"}} class="btn btn-lg btn-success">
-												<!--<button class="btn btn-lg btn-success" id="quickstart-sign-up" name="signin">-->Sign Up</button>
-												<button {{action "sendEmailVerification"}} class="btn btn-lg btn-primary">
-												<!--<button class="btn btn-lg btn-primary" id="quickstart-verify-email" name="verify-email">-->Send Email Verification</button>
+												<button {{action "handleSignUp"}} class="btn btn-lg btn-success">Sign Up</button>
+												<button {{action "sendEmailVerification"}} class="btn btn-lg btn-primary">Send Email Verification</button>
 												<button class="btn btn-lg btn-danger d-none" disabled id="quickstart-password-reset" name="verify-email">Reset Password</button>
 										</center>
 										<hr>

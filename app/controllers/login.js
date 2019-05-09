@@ -54,12 +54,21 @@ export default Controller.extend({
             alert(errorMessage);
           }
           console.log(error);
+<<<<<<< HEAD
           //document.getElementById('quickstart-sign-in').disabled = false;
           // [END_EXCLUDE]
         });
         // [END authwithemail]
       }
       //document.getElementById('quickstart-sign-in').disabled = true;
+=======
+          
+        });
+        
+        
+      }
+      
+>>>>>>> 1b9014241969990ce473e6be094bc2240abb0adc
     }
 },
 });
