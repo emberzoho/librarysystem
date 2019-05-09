@@ -3,7 +3,7 @@ import Controller from '@ember/controller';
 export default Controller.extend({
 		actions:{
 	sendPasswordReset() {
-      var email = document.getElementById('email').value;
+      var email = this.get('email');
       // [START sendpasswordemail]
       firebase.auth().sendPasswordResetEmail(email).then(function() {
         // Password Reset Email Sent!
@@ -31,8 +31,8 @@ export default Controller.extend({
         firebase.auth().signOut();
         // [END signout]
       } else {
-        var email = document.getElementById('email1').value;
-        var password = document.getElementById('password1').value;
+        var email = this.get('email');
+        var password = this.get('password');
         if (email.length < 4) {
           alert('Please enter an email address.');
           return;
