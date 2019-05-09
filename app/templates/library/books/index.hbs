@@ -2,14 +2,14 @@
 <center>
 <div class="mx-5 px-5">
 <h1>Books</h1>
-<BookFilter @filter={{action "filterByBookName"}}
+<Filter @filter={{action "filterByBookName"}}
 as |filteredResults|>
   <section>
     {{#each filteredResults as |bookUnit|}}
       <BookListing @book={{bookUnit}} />
     {{/each}}
   </section>
-</BookFilter>
+</Filter>
 </div>
 </center>
 </section>

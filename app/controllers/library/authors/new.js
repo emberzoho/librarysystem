@@ -7,8 +7,7 @@ export default Controller.extend({
 			var authorname = this.get('authorname');
 			var country = this.get('country');
 			this.store.findRecord('author',1).then(function(count){
-				 var foo=count.authorid;
-				 count.set('authorid',foo+1);
+				 count.incrementProperty('authorid');
 				 count.save();
 			 });
 			var bar=this.store.peekRecord('author',1).get('authorid');

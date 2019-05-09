@@ -2,14 +2,13 @@
 <center>
 <div class="mx-5 px-5">
 <h1>Authors</h1>
-<AuthorFilter @filter={{action "filterByAuthorName"}}
+<Filter @filter={{action "filterByAuthorName"}}
 as |filteredResults|>
   <section>
     {{#each filteredResults as |authorUnit|}}
-      {{this.findbooks authorUnit.authorid}}
       <AuthorListing @author={{authorUnit}} />
     {{/each}}
   </section>
-</AuthorFilter>
+</Filter>
 </div>
 </center>

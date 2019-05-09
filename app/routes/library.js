@@ -1,4 +1,5 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
 	beforeModel(){
@@ -6,8 +7,6 @@ export default Route.extend({
 		if(!user){
 			this.transitionTo('login');
 		}
-	},
-	model(){
-		return this.store.findRecord('user', firebase.auth().currentUser.uid);  // => GET /blog-posts/1
+
 	}
 });

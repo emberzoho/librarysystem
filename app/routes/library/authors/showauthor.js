@@ -8,7 +8,6 @@ export default Route.extend({
             authorrecord: this.store.findRecord('author',temp),
             bookrecord: this.store.query('book',{filter:{'authorid':temp}})
         });
-        
     }
 
 });
