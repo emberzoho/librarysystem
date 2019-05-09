@@ -18,11 +18,11 @@
 								<div class="form">
 										<div class="form-group">
 												<label for="email">Email address</label>
-												<input type="email" class="form-control" name="email" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
+												{{input type="email" class="form-control" name="email" value=email placeholder="Enter email"}}
 										</div>
 										<div class="form-group">
 												<label for="password">Password</label>
-												<input type="password" class="form-control" name="password" id="password1" placeholder="Password">
+												{{input type="password" class="form-control" value=password placeholder="Password"}}
 										</div>
 										<center>
 												<button {{action "toggleSignIn"}} class="btn btn-lg btn-success">
